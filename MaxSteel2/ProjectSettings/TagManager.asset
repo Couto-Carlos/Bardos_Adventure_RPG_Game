@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Link
+  - Sound
+  - Portao1
+  - Portao2
+  - A(1)
+  - A(2)
+  - A(3)
+  - A(4)
+  - A(5)
+  - A(6)
+  - <(1)
+  - <(2)
+  - <(3)
+  - <(4)
+  - <(5)
+  - <(6)
+  - '>(1)'
+  - '>(2)'
+  - '>(3)'
+  - '>(4)'
+  - '>(5)'
+  - '>(6)'
+  - ^(1)
+  - ^(2)
+  - ^(3)
+  - ^(4)
+  - ^(5)
+  - ^(6)
+  - v(1)
+  - v(2)
+  - v(3)
+  - v(4)
+  - v(5)
+  - v(6)
+  - Canvas
+  - OcarinaBase
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
