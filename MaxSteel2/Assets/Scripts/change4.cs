@@ -12,6 +12,7 @@ public class change4 : MonoBehaviour
   // private SceneManagement sceneManagement = new sceneManagement();
     public void OnTriggerEnter2D(Collider2D other)
     {
+        
         Debug.Log("AA VVASKDJsa");
         Debug.Log(other.CompareTag(personagem));
         if(other.CompareTag(personagem) && !other.isTrigger)
