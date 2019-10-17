@@ -247,17 +247,17 @@ public class Movement : MonoBehaviour
                 Ocarina_F.Play();
                 // Localizar Onde colocar a Nota  
                 if (QNTNotas == 0){
-                    E = GameObject.FindGameObjectWithTag("<(1)").GetComponent<Image>();
+                    E = GameObject.FindGameObjectWithTag("v(1)").GetComponent<Image>();
                 }else if (QNTNotas == 1){
-                    E = GameObject.FindGameObjectWithTag("<(2)").GetComponent<Image>();
+                    E = GameObject.FindGameObjectWithTag("v(2)").GetComponent<Image>();
                 }else if (QNTNotas == 2){
-                    E = GameObject.FindGameObjectWithTag("<(3)").GetComponent<Image>();
+                    E = GameObject.FindGameObjectWithTag("v(3)").GetComponent<Image>();
                 }else if (QNTNotas == 3){
-                    E = GameObject.FindGameObjectWithTag("<(4)").GetComponent<Image>();
+                    E = GameObject.FindGameObjectWithTag("v(4)").GetComponent<Image>();
                 }else if (QNTNotas == 4){
-                    E = GameObject.FindGameObjectWithTag("<(5)").GetComponent<Image>();
+                    E = GameObject.FindGameObjectWithTag("v(5)").GetComponent<Image>();
                 }else if (QNTNotas == 5){
-                    E = GameObject.FindGameObjectWithTag("<(6)").GetComponent<Image>();
+                    E = GameObject.FindGameObjectWithTag("v(6)").GetComponent<Image>();
                 }
                 E.enabled = true;
                 //
@@ -271,15 +271,15 @@ public class Movement : MonoBehaviour
                 Ocarina_B.Play();
                 // Localizar Onde colocar a Nota  
                 if (QNTNotas == 0){
-                    B = GameObject.FindGameObjectWithTag("v(1)").GetComponent<Image>();
+                    B = GameObject.FindGameObjectWithTag("<(1)").GetComponent<Image>();
                 }else if (QNTNotas == 1){
-                    B = GameObject.FindGameObjectWithTag("v(2)").GetComponent<Image>();
+                    B = GameObject.FindGameObjectWithTag("<(2)").GetComponent<Image>();
                 }else if (QNTNotas == 2){
-                    B = GameObject.FindGameObjectWithTag("v(3)").GetComponent<Image>();
+                    B = GameObject.FindGameObjectWithTag("<(3)").GetComponent<Image>();
                 }else if (QNTNotas == 3){
-                    B = GameObject.FindGameObjectWithTag("v(4)").GetComponent<Image>();
+                    B = GameObject.FindGameObjectWithTag("<(4)").GetComponent<Image>();
                 }else if (QNTNotas == 4){
-                    B = GameObject.FindGameObjectWithTag("v(5)").GetComponent<Image>();
+                    B = GameObject.FindGameObjectWithTag("<(5)").GetComponent<Image>();
                 }else if (QNTNotas == 5){
                     B = GameObject.FindGameObjectWithTag("v(6)").GetComponent<Image>();
                 }
@@ -341,7 +341,10 @@ public class Movement : MonoBehaviour
                     {
                         //limpar
                         StartCoroutine(ExampleLimp(0.0f));
-                        
+                    }
+                    else
+                    {
+                        StartCoroutine(ExampleLimp(4.0f));
                     }
                         Notas[0] = 0;
                         Notas[1] = 0;
@@ -351,7 +354,7 @@ public class Movement : MonoBehaviour
                         Notas[5] = 0;
                         QNTNotas = 0;
                     tocando = false;
-                    StartCoroutine(ExampleLimp(4.0f));
+                    
                     }
             }
             
