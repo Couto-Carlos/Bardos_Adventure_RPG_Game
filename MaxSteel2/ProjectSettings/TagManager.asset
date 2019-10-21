@@ -40,6 +40,8 @@ TagManager:
   - v(6)
   - Canvas
   - OcarinaBase
+  - PrimeiroText
+  - CanvasCharacter
   layers:
   - Default
   - TransparentFX

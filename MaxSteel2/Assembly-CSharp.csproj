@@ -55,13 +55,14 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Camera.cs" />
      <Compile Include="Assets\Scripts\Click.cs" />
-     <Compile Include="Assets\Scripts\Dellay.cs" />
      <Compile Include="Assets\Scripts\LoadScene.cs" />
      <Compile Include="Assets\Scripts\MoveOffset.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\Prefer.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\StayClose.cs" />
      <Compile Include="Assets\Scripts\change4.cs" />
+     <Compile Include="Assets\Scripts\charge_text.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>E:/CARLOS/Documents/GitHub/Maxstell2.0/MaxSteel2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
