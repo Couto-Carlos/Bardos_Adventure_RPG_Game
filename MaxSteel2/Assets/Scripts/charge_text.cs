@@ -10,7 +10,8 @@ public class charge_text : MonoBehaviour
     public float delay = 0.1f;
     public string FullText;
     private string currentText = "";
-    void Start()
+
+    void OnEnable()
     {
         StartCoroutine(ShowText());
     }
@@ -26,5 +27,12 @@ public class charge_text : MonoBehaviour
 
             }
 
+    }
+
+
+    public void resetText()
+    {
+        currentText = "";
+       // FullText = "";
     }
 }

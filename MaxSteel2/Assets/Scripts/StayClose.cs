@@ -10,44 +10,52 @@ public class StayClose : MonoBehaviour
     public Vector2 LocalPersonagem;
     private GameObject character;
     private bool bateu = false;
-    private bool E = false;
+
     // public Collider2D other;
 
     // private SceneManagement sceneManagement = new sceneManagement();
     public void OnTriggerEnter2D(Collider2D other)
     {
             Debug.Log("bateu no trigger");
-        GameObject canvas2 = character.transform.Find("Canvas2").gameObject;
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
         if (other.CompareTag(personagem) && !other.isTrigger)
             {
             bateu = true;
-            canvas2.SetActive(true);
+            canvasE.SetActive(true);
         }
         
     }
    private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("ksksksks");
-        GameObject canvass = character.transform.Find("Canvass").gameObject;
-        GameObject canvas2 = character.transform.Find("Canvas2").gameObject;
+        Debug.Log("Saiu do Trigger");
+        GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+        GameObject canvasE = character.transform.Find("CanvasE").gameObject;
         bateu = false;
-        canvass.SetActive(false);
-        canvas2.SetActive(false);
+        canvasText.SetActive(false);
+        canvasE.SetActive(false);
+        resetText();
+    }
+
+    void resetText()
+    {
+        GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+        canvasText.GetComponentInChildren<charge_text>().resetText();
+        canvasText.GetComponentInChildren<Text>().text = "";
     }
 
     public void Update()
     {
         character = GameObject.FindGameObjectWithTag("CanvasCharacter");
-        GameObject canvass = character.transform.Find("Canvass").gameObject;
-        GameObject canvas2 = character.transform.Find("Canvas2").gameObject;
+        GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+        GameObject canvasE = character.transform.Find("CanvasE").gameObject;
 
         if (bateu)
         {
             //canvas2.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                canvas2.SetActive(false);
-                canvass.SetActive(true);
+                canvasE.SetActive(false);
+                canvasText.SetActive(true);
             }
         }
         
