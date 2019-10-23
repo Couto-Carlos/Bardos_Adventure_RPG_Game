@@ -14,7 +14,7 @@ public class Camera : MonoBehaviour
 
     void Start()
     {
-        Personagem = GameObject.Find("Link").GetComponent<Transform>();
+        Personagem = GameObject.FindGameObjectWithTag("Link").GetComponent<Transform>();
 
         CameraPosicao = GetComponent<Transform>();
         diferenca = CameraPosicao.position - Personagem.position ; 
