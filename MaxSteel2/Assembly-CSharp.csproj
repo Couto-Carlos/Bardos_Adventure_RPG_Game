@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Camera.cs" />
      <Compile Include="Assets\Scripts\Click.cs" />
+     <Compile Include="Assets\Scripts\InicioScript.cs" />
      <Compile Include="Assets\Scripts\LoadScene.cs" />
      <Compile Include="Assets\Scripts\MoveOffset.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />

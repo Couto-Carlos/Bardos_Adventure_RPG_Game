@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Math.unity
     guid: 7b9a3e6865438264fb317792e4553108
+  - enabled: 1
+    path: Assets/Scenes/Mundo.unity
+    guid: 588e2fe84cfe05848a86156d09a96430
   m_configObjects: {}
