@@ -42,6 +42,7 @@ TagManager:
   - OcarinaBase
   - PrimeiroText
   - CanvasCharacter
+  - CanvasCharacterFlorista
   layers:
   - Default
   - TransparentFX

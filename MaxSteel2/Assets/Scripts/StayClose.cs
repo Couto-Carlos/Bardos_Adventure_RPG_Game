@@ -10,6 +10,7 @@ public class StayClose : MonoBehaviour
     public Vector2 LocalPersonagem;
     private GameObject character;
     private bool bateu = false;
+    public bool Florista;
 
     // public Collider2D other;
 
@@ -17,23 +18,48 @@ public class StayClose : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
             Debug.Log("bateu no trigger");
-            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
-        if (other.CompareTag(personagem) && !other.isTrigger)
+        if (Florista == true)
+        {
+            GameObject canvasFlorista = character.transform.Find("CanvasFlorista").gameObject;
+            if (other.CompareTag(personagem) && !other.isTrigger)
             {
-            bateu = true;
-            canvasE.SetActive(true);
+                bateu = true;
+                canvasFlorista.SetActive(true);
+            }
         }
-        
+        else
+        {
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+            if (other.CompareTag(personagem) && !other.isTrigger)
+            {
+                bateu = true;
+                canvasE.SetActive(true);
+            }
+        }
     }
    private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Saiu do Trigger");
-        GameObject canvasText = character.transform.Find("CanvasText").gameObject;
-        GameObject canvasE = character.transform.Find("CanvasE").gameObject;
-        bateu = false;
-        canvasText.SetActive(false);
-        canvasE.SetActive(false);
-        resetText();
+        if (Florista == true)
+        {
+            Debug.Log("Saiu do Trigger");
+            GameObject canvasTextFlorista = character.transform.Find("CanvasTextFlorista").gameObject;
+            GameObject canvasFlorista = character.transform.Find("CanvasFlorista").gameObject;
+            bateu = false;
+            canvasTextFlorista.SetActive(false);
+            canvasFlorista.SetActive(false);
+            resetText();
+        }
+        else
+        {
+
+            Debug.Log("Saiu do Trigger");
+            GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+            bateu = false;
+            canvasText.SetActive(false);
+            canvasE.SetActive(false);
+            resetText();
+        }
     }
 
     void resetText()
@@ -45,17 +71,36 @@ public class StayClose : MonoBehaviour
 
     public void Update()
     {
-        character = GameObject.FindGameObjectWithTag("CanvasCharacter");
-        GameObject canvasText = character.transform.Find("CanvasText").gameObject;
-        GameObject canvasE = character.transform.Find("CanvasE").gameObject;
-
-        if (bateu)
+        if (Florista == true)
         {
-            //canvas2.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
+            character = GameObject.FindGameObjectWithTag("CanvasCharacterFlorista");
+            GameObject canvasText = character.transform.Find("CanvasTextFlorista").gameObject;
+            GameObject canvasE = character.transform.Find("CanvasFlorista").gameObject;
+
+            if (bateu)
             {
-                canvasE.SetActive(false);
-                canvasText.SetActive(true);
+                //canvas2.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    canvasE.SetActive(false);
+                    canvasText.SetActive(true);
+                }
+            }
+        }
+        else
+        {
+            character = GameObject.FindGameObjectWithTag("CanvasCharacter");
+            GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+
+            if (bateu)
+            {
+                //canvas2.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    canvasE.SetActive(false);
+                    canvasText.SetActive(true);
+                }
             }
         }
         
