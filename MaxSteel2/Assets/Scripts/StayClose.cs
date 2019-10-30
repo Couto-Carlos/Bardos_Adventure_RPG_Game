@@ -20,7 +20,10 @@ public class StayClose : MonoBehaviour
             Debug.Log("bateu no trigger");
         if (Florista == true)
         {
+            
             GameObject canvasFlorista = character.transform.Find("CanvasFlorista").gameObject;
+            GameObject selectE = GameObject.FindGameObjectWithTag("CanvasCharacterFlorista").transform.Find("CanvasFlorista").gameObject;
+            selectE = canvasFlorista;
             if (other.CompareTag(personagem) && !other.isTrigger)
             {
                 bateu = true;
@@ -29,7 +32,10 @@ public class StayClose : MonoBehaviour
         }
         else
         {
+            
             GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+            GameObject selectE = GameObject.FindGameObjectWithTag("CanvasCharacter").transform.Find("CanvasE").gameObject;
+            selectE = canvasE;
             if (other.CompareTag(personagem) && !other.isTrigger)
             {
                 bateu = true;
@@ -64,9 +70,22 @@ public class StayClose : MonoBehaviour
 
     void resetText()
     {
-        GameObject canvasText = character.transform.Find("CanvasText").gameObject;
-        canvasText.GetComponentInChildren<charge_text>().resetText();
-        canvasText.GetComponentInChildren<Text>().text = "";
+        if (Florista)
+        {
+            GameObject canvasE = character.transform.Find("CanvasTextFlorista").gameObject;
+            canvasE.GetComponentInChildren<charge_text>().E = character.transform.Find("CanvasFlorista").gameObject;
+            GameObject canvasText = character.transform.Find("CanvasTextFlorista").gameObject;
+            canvasText.GetComponentInChildren<charge_text>().resetText();
+            canvasText.GetComponentInChildren<Text>().text = "";
+        }
+        else
+        {
+            GameObject canvasE = character.transform.Find("CanvasText").gameObject;
+            canvasE.GetComponentInChildren<charge_text>().E = character.transform.Find("CanvasE").gameObject;
+            GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+            canvasText.GetComponentInChildren<charge_text>().resetText();
+            canvasText.GetComponentInChildren<Text>().text = "";
+        }
     }
 
     public void Update()
@@ -75,6 +94,7 @@ public class StayClose : MonoBehaviour
         {
             character = GameObject.FindGameObjectWithTag("CanvasCharacterFlorista");
             GameObject canvasText = character.transform.Find("CanvasTextFlorista").gameObject;
+            canvasText.transform.Find("Text").GetComponent<charge_text>().parent = canvasText;
             GameObject canvasE = character.transform.Find("CanvasFlorista").gameObject;
 
             if (bateu)
@@ -91,6 +111,7 @@ public class StayClose : MonoBehaviour
         {
             character = GameObject.FindGameObjectWithTag("CanvasCharacter");
             GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+            canvasText.transform.Find("Text").GetComponent<charge_text>().parent = canvasText;
             GameObject canvasE = character.transform.Find("CanvasE").gameObject;
 
             if (bateu)

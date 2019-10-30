@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.025005}
-  m_SizeDelta: {x: 399, y: 224.05}
+  m_AnchoredPosition: {x: -24.3, y: -31.4}
+  m_SizeDelta: {x: 1137.3, y: 892}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55761150
 MonoBehaviour:
@@ -218,7 +218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341926131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.1, y: 98.1, z: 201.59998}
+  m_LocalPosition: {x: -23.4, y: 62.8, z: 201.59998}
   m_LocalScale: {x: 22.399998, y: 22.399998, z: 22.399998}
   m_Children: []
   m_Father: {fileID: 1290553158}
@@ -241,7 +241,7 @@ TextMesh:
     que aprender novas m\xFAsicas \nem seu repert\xF3rio para toca-las ao Rei e recuperar
     \nsua amada filha.\nmostrar como o jogo funciona."
   m_OffsetZ: 0
-  m_CharacterSize: 0.3
+  m_CharacterSize: 0.2
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 4
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -494,7 +494,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: -76.7}
+  m_AnchoredPosition: {x: 35.3, y: -74.7}
   m_SizeDelta: {x: 160, y: 29.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570498216

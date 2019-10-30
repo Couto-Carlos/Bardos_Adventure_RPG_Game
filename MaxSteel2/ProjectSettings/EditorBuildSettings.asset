@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Inicio4.unity
     guid: 50983423645b6be4a987cfe1c7e9e098
+  - enabled: 1
+    path: Assets/Scenes/Inicio0.unity
+    guid: 33648aa6b4011464da605b0bbc0eb3d2
   m_configObjects: {}

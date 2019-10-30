@@ -9,6 +9,7 @@ public class InicioScript : MonoBehaviour
    public bool Sceneinicio3 = false;
    public bool Sceneinicio4 = false;
    public bool Sceneinicio6 = false;
+   public bool SceneInicio0 = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,11 @@ public class InicioScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Sceneinicio2 == true)
+            if (SceneInicio0 == true)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio2");
+            }
+            else if (Sceneinicio2 == true)
             {
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio3");
             }

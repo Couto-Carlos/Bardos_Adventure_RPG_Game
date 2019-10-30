@@ -166,6 +166,7 @@ public class Movement : MonoBehaviour
                 Notas[3] = 0;
                 Notas[4] = 0;
                 Notas[5] = 0;
+                StartCoroutine(ExampleLimp(0.0f));
 
             }
             else if (Input.GetKeyDown(KeyCode.H))
@@ -337,14 +338,14 @@ public class Movement : MonoBehaviour
                 }
                     if (QNTNotas == 6)
                     {
-                    if (tocando == false)
+                    if (tocando == true)
                     {
                         //limpar
-                        StartCoroutine(ExampleLimp(0.0f));
+                        StartCoroutine(ExampleLimp(4.0f));
                     }
                     else
                     {
-                        StartCoroutine(ExampleLimp(4.0f));
+                        StartCoroutine(ExampleLimp(0.0f));
                     }
                         Notas[0] = 0;
                         Notas[1] = 0;
