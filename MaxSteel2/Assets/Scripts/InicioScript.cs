@@ -10,6 +10,7 @@ public class InicioScript : MonoBehaviour
    public bool Sceneinicio4 = false;
    public bool Sceneinicio6 = false;
    public bool SceneInicio0 = false;
+    public bool Load = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,11 @@ public class InicioScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Load == true)
+        {
+            StartCoroutine(DELAY());
+           
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -37,7 +42,7 @@ public class InicioScript : MonoBehaviour
             }
             else if (Sceneinicio4 == true)
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Mundo");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Load");
             }
             else if (Sceneinicio5 == true)
             {
@@ -45,12 +50,19 @@ public class InicioScript : MonoBehaviour
             }
             else if (Sceneinicio6 == true)
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Mundo");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Load");
             }
+            
             else
             {
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio");
             }
+        }
+         
+        IEnumerator DELAY()
+        {
+            yield return new WaitForSeconds(2f);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Mundo");
         }
     }
 }
