@@ -28,6 +28,10 @@ public class Movement : MonoBehaviour
     public bool OcarinaMode = false;
     Image Ocarinabase;
     Image A, D, E, C, B;
+    public Vector2 StartingPosition;
+    public Vector2 BackPosition;
+    public bool TrocaDeTela;
+  
     
 
     bool tocando = false;
@@ -38,6 +42,13 @@ public class Movement : MonoBehaviour
     {
         corpo = GetComponent<Rigidbody2D>();
         animador = GetComponent<Animator>();
+        if (TrocaDeTela == true) {
+            transform.position = BackPosition;
+        }
+        else
+        {
+            transform.position = StartingPosition;
+        }
         Sounds = GameObject.FindGameObjectWithTag("Sound");
         Ocarinabase = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
         A = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
