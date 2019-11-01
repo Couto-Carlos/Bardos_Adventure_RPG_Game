@@ -11,6 +11,7 @@ public class StayClose : MonoBehaviour
     private GameObject character;
     private bool bateu = false;
     public bool Florista;
+    public bool placa;
 
     // public Collider2D other;
 
@@ -28,6 +29,16 @@ public class StayClose : MonoBehaviour
             {
                 bateu = true;
                 canvasFlorista.SetActive(true);
+            }
+        }else if(placa == true)
+        {
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+            GameObject selectE = GameObject.Find("ListenerPlaca1").transform.Find("CanvasE").gameObject;
+            selectE = canvasE;
+            if (other.CompareTag(personagem) && !other.isTrigger)
+            {
+                bateu = true;
+                canvasE.SetActive(true);
             }
         }
         else
@@ -55,6 +66,16 @@ public class StayClose : MonoBehaviour
             canvasFlorista.SetActive(false);
             resetText();
         }
+        else if (placa ==true)
+        {
+            Debug.Log("Saiu do Trigger");
+            GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+            bateu = false;
+            canvasText.SetActive(false);
+            canvasE.SetActive(false);
+            resetText();
+        }
         else
         {
 
@@ -78,6 +99,14 @@ public class StayClose : MonoBehaviour
             canvasText.GetComponentInChildren<charge_text>().resetText();
             canvasText.GetComponentInChildren<Text>().text = "";
         }
+        else if (placa)
+        {
+            GameObject canvasE = character.transform.Find("CanvasText").gameObject;
+            canvasE.GetComponentInChildren<charge_text>().E = character.transform.Find("CanvasE").gameObject;
+            GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+            canvasText.GetComponentInChildren<charge_text>().resetText();
+            canvasText.GetComponentInChildren<Text>().text = "";
+        }
         else
         {
             GameObject canvasE = character.transform.Find("CanvasText").gameObject;
@@ -96,6 +125,23 @@ public class StayClose : MonoBehaviour
             GameObject canvasText = character.transform.Find("CanvasTextFlorista").gameObject;
             canvasText.transform.Find("Text").GetComponent<charge_text>().parent = canvasText;
             GameObject canvasE = character.transform.Find("CanvasFlorista").gameObject;
+
+            if (bateu)
+            {
+                //canvas2.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    canvasE.SetActive(false);
+                    canvasText.SetActive(true);
+                }
+            }
+        }
+        else if (placa)
+        {
+            character = GameObject.Find("ListenerPlaca1");
+            GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+            canvasText.transform.Find("Text").GetComponent<charge_text>().parent = canvasText;
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
 
             if (bateu)
             {

@@ -11,10 +11,11 @@ public class InicioScript : MonoBehaviour
    public bool Sceneinicio6 = false;
    public bool SceneInicio0 = false;
     public bool Load = false;
+   
     // Start is called before the first frame update
     void Start()
     {
-     
+       
     }
 
     // Update is called once per frame
@@ -61,6 +62,8 @@ public class InicioScript : MonoBehaviour
          
         IEnumerator DELAY()
         {
+            
+         
             yield return new WaitForSeconds(2f);
             UnityEngine.SceneManagement.SceneManager.LoadScene("Mundo");
         }

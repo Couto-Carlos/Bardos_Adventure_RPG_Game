@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour
     Image A, D, E, C, B;
     public Vector2 StartingPosition;
     public Vector2 BackPosition;
+    public int StartPosit = 0;
     public bool TrocaDeTela;
   
     
@@ -40,15 +41,18 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        corpo = GetComponent<Rigidbody2D>();
-        animador = GetComponent<Animator>();
-        if (TrocaDeTela == true) {
-            transform.position = BackPosition;
-        }
-        else
+        StartPosit++;
+        if (StartPosit == 1)
         {
             transform.position = StartingPosition;
         }
+        else
+        {
+            transform.position = BackPosition;
+        }
+        corpo = GetComponent<Rigidbody2D>();
+        animador = GetComponent<Animator>();
+        
         Sounds = GameObject.FindGameObjectWithTag("Sound");
         Ocarinabase = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
         A = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
@@ -65,7 +69,6 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-
         
         corpo.velocity = new Vector2(0, 0);
 

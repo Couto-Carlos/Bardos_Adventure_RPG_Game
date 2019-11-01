@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Load.unity
     guid: 9faeddbffc4914a40922461797a16003
+  - enabled: 1
+    path: Assets/Scenes/Florista.unity
+    guid: 0cda03f3ba974604c9f81a48844a9c1e
   m_configObjects: {}

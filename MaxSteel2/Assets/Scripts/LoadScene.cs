@@ -17,6 +17,7 @@ public class LoadScene : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         GameObject Bardo = GameObject.FindGameObjectWithTag("Link").gameObject;
+        Bardo.GetComponent<Movement>().TrocaDeTela = true;
         Debug.Log("AA VVASKDJsa");
         Debug.Log(other.CompareTag(personagem));
         if(other.CompareTag(personagem) && !other.isTrigger)
