@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;	
 using UnityEngine.SceneManagement;
-
 public class Movement : MonoBehaviour
 {
     public float velocidade = 6;
     public Rigidbody2D corpo;
     public Animator animador;
+    public static Movement instance = null;
     public AudioSource HurricaneSound;
     public AudioSource Ocarina_D;
     public AudioSource Ocarina_D2;
@@ -32,27 +32,14 @@ public class Movement : MonoBehaviour
     public Vector2 BackPosition;
     public int StartPosit = 0;
     public bool TrocaDeTela;
-  
-    
-
     bool tocando = false;
     int[] Notas = new int[6];
     int QNTNotas = 0;
 
     void Start()
-    {
-        StartPosit++;
-        if (StartPosit == 1)
-        {
-            transform.position = StartingPosition;
-        }
-        else
-        {
-            transform.position = BackPosition;
-        }
+    {    
         corpo = GetComponent<Rigidbody2D>();
-        animador = GetComponent<Animator>();
-        
+        animador = GetComponent<Animator>(); 
         Sounds = GameObject.FindGameObjectWithTag("Sound");
         Ocarinabase = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
         A = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
@@ -60,18 +47,37 @@ public class Movement : MonoBehaviour
         C = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
         B = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
         E = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
+        if (instance == null)
+        {
+            //if not, set it to this.
+            instance = this;
+            //musicSource.Play();
+            //If instance already exists:
+        }
+        else if (instance != this)
+        {
+            //Destroy this, this enforces our singleton pattern so there can only be one instance of SoundManager.
+            Destroy(gameObject);
+        }
+        //Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
+        DontDestroyOnLoad(gameObject);
     }
-
-    /*  IEnumerator Dellay(float time)
-     {
-         yield return new WaitForSeconds(time);     
-     }*/
 
     void Update()
     {
-        
+        StartPosit++;
+            if (StartPosit == 1)
+        {
+            Debug.Log("Starting Position enter");
+            transform.position = StartingPosition;
+        }
+        if (TrocaDeTela)
+        {
+            Debug.Log("Back Position enter");
+            transform.position = BackPosition;
+            TrocaDeTela = false;
+        }
         corpo.velocity = new Vector2(0, 0);
-
         if (OcarinaMode == false)
         {
 
@@ -421,23 +427,6 @@ public class Movement : MonoBehaviour
     }
 }
 //////////////////////////////////////////////////////////////////////////////////
- /*
-   public class WaitForSecondsExample : MonoBehaviour
-{
-    public void Start()
-    {
-        StartCoroutine(Example());
-    }
-
-    IEnumerator Example()
-    {
-        Debug.Log("COMECO");
-        yield return new WaitForSeconds(5);
-        
-        Debug.Log("FIM");
-    }
-}
- */
  
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

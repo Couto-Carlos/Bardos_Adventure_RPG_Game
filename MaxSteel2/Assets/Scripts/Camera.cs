@@ -17,13 +17,15 @@ public class Camera : MonoBehaviour
         Personagem = GameObject.FindGameObjectWithTag("Link").GetComponent<Transform>();
 
         CameraPosicao = GetComponent<Transform>();
-        diferenca = CameraPosicao.position - Personagem.position ; 
+        diferenca = CameraPosicao.position - Personagem.position ;
+        
     }
 
    
     void FixedUpdate()
     {
-        if(CameraPosicao.position != Personagem.position){
+       
+        if (CameraPosicao.position != Personagem.position){
          Vector3 targetPosition = new Vector3(Personagem.position.x, Personagem.position.y, CameraPosicao.position.z);
 
          targetPosition.x = Mathf.Clamp(targetPosition.x,

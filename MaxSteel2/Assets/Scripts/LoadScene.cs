@@ -16,15 +16,19 @@ public class LoadScene : MonoBehaviour
   // private SceneManagement sceneManagement = new sceneManagement();
     public void OnTriggerEnter2D(Collider2D other)
     {
+        ///////////////////////////////////////////////////////////////////////
         GameObject Bardo = GameObject.FindGameObjectWithTag("Link").gameObject;
         Bardo.GetComponent<Movement>().TrocaDeTela = true;
         Debug.Log("AA VVASKDJsa");
         Debug.Log(other.CompareTag(personagem));
+        ////////////////////////////////////////////////////////////////////////
         if(other.CompareTag(personagem) && !other.isTrigger)
         {
+            ///////////////////////////////////////////////////////////////////
             Debug.Log("ENTROU");
             Bardo.GetComponent<Movement>().BackPosition = BackPosition; 
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneLoad);
+            ///////////////////////////////////////////////////////////////////
         }
     }
 }
