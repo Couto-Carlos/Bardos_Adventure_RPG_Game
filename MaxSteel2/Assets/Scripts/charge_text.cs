@@ -35,8 +35,6 @@ public class charge_text : MonoBehaviour
         }
         else { 
         string TextoCompleto = texts[mensagemAtual];
-
-
             delay = 0.06f;
                 TextoPassado = false;
                 for (int i = 0; i <= TextoCompleto.Length; i++)   {

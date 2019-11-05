@@ -44,6 +44,7 @@ TagManager:
   - CanvasCharacter
   - CanvasCharacterFlorista
   - npc
+  - Fanding
   layers:
   - Default
   - TransparentFX

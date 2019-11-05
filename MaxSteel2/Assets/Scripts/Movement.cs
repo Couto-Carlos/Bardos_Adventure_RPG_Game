@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     public AudioSource MarioMusic;
     public AudioSource SongOfHealingMusic;
     public AudioSource SongOfTime;
+    public AudioSource MegalovaniaMusic;
     public AudioSource SongOfStorm;
     public AudioSource WIN;
     public GameObject Sounds;
@@ -176,6 +177,7 @@ public class Movement : MonoBehaviour
                 //PararMusicas
                 MarioMusic.Stop();
                 SongOfHealingMusic.Stop();
+                MegalovaniaMusic.Stop();
                 //Volta Musica de fundo
                 Sounds.GetComponent<AudioSource>().mute = !Sounds.GetComponent<AudioSource>().mute;
                 //limpar
@@ -354,6 +356,10 @@ public class Movement : MonoBehaviour
                 else if (Notas[0] == 3 && Notas[1] == 1 && Notas[2] == 4 && Notas[3] == 3 && Notas[4] == 1 && Notas[5] == 4)
                 {
                     SongOfTime.Play();
+                    tocando = true;
+                }else if (Notas[0] == 1 && Notas[1] == 1 && Notas[2] == 2 && Notas[3] == 3 && Notas[4] == 4 && Notas[5] == 1)
+                {
+                    MegalovaniaMusic.Play();
                     tocando = true;
                 }
                     if (QNTNotas == 6)
