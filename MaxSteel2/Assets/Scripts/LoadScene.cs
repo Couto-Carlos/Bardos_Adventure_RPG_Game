@@ -9,41 +9,55 @@ public class LoadScene : MonoBehaviour
    public string sceneLoad;
    public string personagem;
     public Vector2 LocalPersonagem;
-    public Vector2 BackPosition;
-    public GameObject Fand;
+    public Vector2 StartingPosition;
+    public GameObject FandIN;
+    public GameObject FandOUT;
     public Animator Fanding;
     public bool OUT;
     public bool IN;
+    GameObject Bardo;
+    GameObject Mundo;
+    public bool newPos;
     // public Collider2D other;
 
     // private SceneManagement sceneManagement = new sceneManagement();
 
     private void Awake()
     {
-        if (Fand != null)
+       Mundo = GameObject.FindGameObjectWithTag("Mundo");
+        Bardo = GameObject.FindGameObjectWithTag("Link").gameObject;
+        Debug.Log(Mundo);
+        
+    }
+    private void Start()
+    {
+        if (FandOUT != null)
         {
-           GameObject Panel = Instantiate(Fand, Vector3.zero, Quaternion.identity) as GameObject;
+            GameObject Panel = Instantiate(FandOUT, Vector3.zero, Quaternion.identity) as GameObject;
             Destroy(Panel, 1);
         }
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
-
+        
         ///////////////////////////////////////////////////////////////////////
-       // Fanding = GameObject.FindGameObjectWithTag("Fanding").gameObject.GetComponent<Animator>();
-        GameObject Bardo = GameObject.FindGameObjectWithTag("Link").gameObject;
-        Bardo.GetComponent<Movement>().TrocaDeTela = true;
+        // Fanding = GameObject.FindGameObjectWithTag("Fanding").gameObject.GetComponent<Animator>();    
+        //Bardo.GetComponent<Movement>().StartPosit = true;
+        //Bardo.GetComponent<Movement>().StartingPosition = BackPosition;
         Debug.Log("AA VVASKDJsa");
         Debug.Log(other.CompareTag(personagem));
         ////////////////////////////////////////////////////////////////////////
         
         if (other.CompareTag(personagem) && !other.isTrigger)
-        {           
+        {
+
+            
             ///////////////////////////////////////////////////////////////////
             Debug.Log("ENTROU");
-            Bardo.GetComponent<Movement>().BackPosition = BackPosition;
-            Bardo.GetComponent<Movement>().StartingPosition = Bardo.transform.position;
-            StartCoroutine(FandingCo(0.5f));
+            // Bardo.GetComponent<Movement>().BackPosition = BackPosition;
+            // Bardo.GetComponent<Movement>().StartingPosition = Bardo.transform.position;
+            //  StartCoroutine(Wait(1f));
+            StartCoroutine(FandingCo(0.8f));
             ///////////////////////////////////////////////////////////////////
         }
     }
@@ -54,15 +68,21 @@ public class LoadScene : MonoBehaviour
 
     IEnumerator FandingCo(float f)
     {
-        if (Fand != null)
+        Mundo.GetComponent<StartingPosition>().Position = StartingPosition;
+        if (newPos)
         {
-            Instantiate(Fand, Vector3.zero, Quaternion.identity);
+            SceneManage.instance.lastPosition = new Vector2(Bardo.transform.position.x, Bardo.transform.position.y - 1);
+            SceneManage.instance.taEntrando = true;
+        } else
+        {
+            SceneManage.instance.taEntrando = false;
         }
+
+
+        Instantiate(FandIN, Vector3.zero, Quaternion.identity);   
         yield return new WaitForSeconds(f);
-        AsyncOperation Assync = SceneManager.LoadSceneAsync(sceneLoad);
-        while (!Assync.isDone)
-        {
-            yield return null;
-        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneLoad);
+        Bardo.GetComponent<Movement>().StartPosit = true;
+        
     }
 }

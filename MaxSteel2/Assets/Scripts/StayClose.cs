@@ -21,12 +21,12 @@ public class StayClose : MonoBehaviour
             Debug.Log("bateu no trigger");
         if (Florista == true)
         {
-            
             GameObject canvasFlorista = character.transform.Find("CanvasFlorista").gameObject;
             GameObject selectE = GameObject.FindGameObjectWithTag("CanvasCharacterFlorista").transform.Find("CanvasFlorista").gameObject;
             selectE = canvasFlorista;
             if (other.CompareTag(personagem) && !other.isTrigger)
             {
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Tranca1 = true;
                 bateu = true;
                 canvasFlorista.SetActive(true);
             }

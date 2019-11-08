@@ -5,16 +5,28 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class Movement : MonoBehaviour
 {
-    public float velocidade = 6;
+    //HLkKhK Beliver/ HKLJLK JoJo // LILILK The good the bad the ugly // IIIHKL Flauta Lindinha // HHKILJ OT 8 - BITS 
+    //RigidBody
     public Rigidbody2D corpo;
+    //Animator
     public Animator animador;
+    //instancia
+
     public static Movement instance = null;
-    public AudioSource HurricaneSound;
+
+    // Notas
     public AudioSource Ocarina_D;
     public AudioSource Ocarina_D2;
     public AudioSource Ocarina_F;
     public AudioSource Ocarina_B;
     public AudioSource Ocarina_A;
+
+    // Musicas
+    public AudioSource BeliverSong;
+    public AudioSource JoJoSong;
+    public AudioSource Faroeste;
+    public AudioSource FLindineaSong;
+    public AudioSource OT8BitsSong;
     public AudioSource MusicaDeFundo;
     public AudioSource MarioMusic;
     public AudioSource SongOfHealingMusic;
@@ -22,38 +34,60 @@ public class Movement : MonoBehaviour
     public AudioSource MegalovaniaMusic;
     public AudioSource SongOfStorm;
     public AudioSource WIN;
-    public GameObject Sounds;
-    public bool Scene2 = false;
-    public bool Scene3 = false;
     private AudioSource MusicaTocando;
+
+    //Booleanos
+
+    public bool Tranca1 = false;
+    public bool Scene3 = false;
     public bool OcarinaMode = false;
-    Image Ocarinabase;
-    Image A, D, E, C, B;
-    public Vector2 StartingPosition;
-    public Vector2 BackPosition;
-    public int StartPosit = 0;
+    public bool StartPosit = true;
     public bool TrocaDeTela;
     bool tocando = false;
+
+    //Images
+
+    Image Ocarinabase;
+    Image A, D, E, C, B;
+
+    //Vectors
+
+    public Vector2 StartingPosition;
+
+    // Numerals
+
+    public float velocidade = 6;
     int[] Notas = new int[6];
     int QNTNotas = 0;
 
+    //Game Object
+
+    public GameObject Sounds;
+
+
     void Start()
     {    
+        // SetBardoForms
         corpo = GetComponent<Rigidbody2D>();
         animador = GetComponent<Animator>(); 
+        //Sound
         Sounds = GameObject.FindGameObjectWithTag("Sound");
+        //Definição OcarinaBase
         Ocarinabase = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
+        //Definindo Notas
         A = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
         D = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
         C = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
         B = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
         E = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
+
+
+        //Instanciamento
         if (instance == null)
         {
-            //if not, set it to this.
+  
             instance = this;
-            //musicSource.Play();
-            //If instance already exists:
+   
         }
         else if (instance != this)
         {
@@ -64,31 +98,29 @@ public class Movement : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+
     void Update()
     {
-        StartPosit++;
-            if (StartPosit == 1)
-        {
+            if (StartPosit == true) {
             Debug.Log("Starting Position enter");
-            transform.position = StartingPosition;
+
+            if (SceneManage.instance.taEntrando) {
+                transform.position = StartingPosition;
+            } else {
+                if(SceneManage.instance.lastPosition == Vector2.zero) {
+                        transform.position = StartingPosition;
+                }else {
+                    transform.position = SceneManage.instance.lastPosition;
+                }
+            }
+            
+            Debug.Log(transform.position);  
+            StartPosit = false;
         }
-        if (TrocaDeTela)
-        {
-            Debug.Log("Back Position enter");
-            transform.position = BackPosition;
-            TrocaDeTela = false;
-        }
+
         corpo.velocity = new Vector2(0, 0);
         if (OcarinaMode == false)
         {
-
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                //Hurricane
-                animador.SetTrigger("Atack");
-                StartCoroutine(Example(HurricaneSound, .1f));
-
-            }
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Sounds.GetComponent<AudioSource>().mute = !Sounds.GetComponent<AudioSource>().mute;
@@ -188,6 +220,7 @@ public class Movement : MonoBehaviour
                 Notas[3] = 0;
                 Notas[4] = 0;
                 Notas[5] = 0;
+                StartCoroutine(ExampleStopMusic(0.0f));
                 StartCoroutine(ExampleLimp(0.0f));
 
             }
@@ -326,12 +359,13 @@ public class Movement : MonoBehaviour
                 }
                 else if (Notas[0] == 5 && Notas[1] == 3 && Notas[2] == 4 && Notas[3] == 5 && Notas[4] == 3 && Notas[5] == 4)
                 {
-                    if (Scene2 == true)
+                    if (Tranca1 == true)
                     {
                         StartCoroutine(Example(WIN, 2.5f));
-                        GameObject Parede = GameObject.FindGameObjectWithTag("Portao1");
+                        GameObject Tranca1 = GameObject.Find("CanvasTrancas").transform.Find("PrimeiraTranca").gameObject;
                         //  Destroy(Parede);
-                        Parede.SetActive(false);
+                        Tranca1.SetActive(false);
+
                     }
                     SongOfHealingMusic.Play();
                     tocando = true;
@@ -361,8 +395,34 @@ public class Movement : MonoBehaviour
                 {
                     MegalovaniaMusic.Play();
                     tocando = true;
+                    //HLkKhK Beliver/ HKLJLK JoJo // LILILK The good the bad the ugly // IIIHKL Flauta Lindinha // HHKILJ OT 8 - BITS 
                 }
-                    if (QNTNotas == 6)
+                else if (Notas[0] == 3 && Notas[1] == 2 && Notas[2] == 3 && Notas[3] == 2 && Notas[4] == 3 && Notas[5] == 4)
+                {
+                    Faroeste.Play();
+                    tocando = true;
+                }
+                else if (Notas[0] == 1 && Notas[1] == 1 && Notas[2] == 4 && Notas[3] == 2 && Notas[4] == 3 && Notas[5] == 5)
+                {
+                    OT8BitsSong.Play();
+                    tocando = true;
+                }
+                else if (Notas[0] == 1 && Notas[1] == 3 && Notas[2] == 4 && Notas[3] == 4 && Notas[4] == 1 && Notas[5] == 4)
+                {
+                    BeliverSong.Play();
+                    tocando = true;
+                }
+                else if (Notas[0] == 1 && Notas[1] == 4 && Notas[2] == 3 && Notas[3] == 5 && Notas[4] == 3 && Notas[5] == 4)
+                {
+                    JoJoSong.Play();
+                    tocando = true;
+                }
+                else if (Notas[0] == 2 && Notas[1] == 2 && Notas[2] == 2 && Notas[3] == 1 && Notas[4] == 4 && Notas[5] == 3)
+                {
+                    FLindineaSong.Play();
+                    tocando = true;
+                }
+                if (QNTNotas == 6)
                     {
                     if (tocando == true)
                     {
@@ -393,6 +453,23 @@ public class Movement : MonoBehaviour
         yield return new WaitForSeconds(time);
         audioSource.Play();
         Debug.Log("FIM");
+    }
+    IEnumerator ExampleStopMusic(float time)
+    {
+    BeliverSong.Stop();
+    JoJoSong.Stop();
+    Faroeste.Stop();
+    FLindineaSong.Stop();
+    OT8BitsSong.Stop();
+    MusicaDeFundo.Stop();
+    MarioMusic.Stop();
+    SongOfHealingMusic.Stop();
+    SongOfTime.Stop();
+    MegalovaniaMusic.Stop();
+    SongOfStorm.Stop();
+    WIN.Stop();
+    
+    yield return new WaitForSeconds(time);
     }
     IEnumerator ExampleLimp(float time)
     {

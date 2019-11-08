@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\SceneManage.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\change4.cs" />
     <Compile Include="Assets\Scripts\charge_text.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\Scripts\Prefer.cs" />
     <Compile Include="Assets\Scripts\scdsadasd.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\StartingPosition.cs" />
     <Compile Include="Assets\Scripts\StayClose.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/CARLOS/Documents/GitHub/Maxstell2.0/MaxSteel2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

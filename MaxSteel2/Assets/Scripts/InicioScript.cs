@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InicioScript : MonoBehaviour
 {
+    public bool Sceneinicio = false;
    public bool Sceneinicio2 = false;
    public bool Sceneinicio5 = false;
    public bool Sceneinicio3 = false;
@@ -54,7 +55,7 @@ public class InicioScript : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Load");
             }
             
-            else
+            else if (Sceneinicio == true)
             {
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio");
             }
