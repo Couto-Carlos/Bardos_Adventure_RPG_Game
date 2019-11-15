@@ -362,7 +362,7 @@ public class Movement : MonoBehaviour
                     if (Tranca1 == true)
                     {
                         StartCoroutine(Example(WIN, 2.5f));
-                        GameObject Tranca1 = GameObject.Find("CanvasTrancas").transform.Find("PrimeiraTranca").gameObject;
+                        GameObject Tranca1 = GameObject.FindGameObjectWithTag("Portao1").transform.Find("PrimeiraTranca").gameObject;
                         //  Destroy(Parede);
                         Tranca1.SetActive(false);
 

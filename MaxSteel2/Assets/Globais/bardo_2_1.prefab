@@ -921,7 +921,7 @@ RectTransform:
   - {fileID: 3218271387350166670}
   - {fileID: 3218271388068139241}
   m_Father: {fileID: 3218271387814251415}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2385,7 +2385,7 @@ RectTransform:
   - {fileID: 3218271387577142936}
   - {fileID: 3218271388235283177}
   m_Father: {fileID: 3218271387814251415}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2504,8 +2504,8 @@ Transform:
   m_LocalPosition: {x: -0.23, y: -4.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3218271387728512590}
   - {fileID: 3218271388672303450}
+  - {fileID: 3218271387728512590}
   - {fileID: 3218271389104668556}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -4496,7 +4496,7 @@ MonoBehaviour:
   MegalovaniaMusic: {fileID: 4513026954517151160}
   SongOfStorm: {fileID: 3218271388684047341}
   WIN: {fileID: 3218271388684047336}
-  Scene2: 0
+  Tranca1: 0
   Scene3: 0
   OcarinaMode: 0
   StartPosit: 0
