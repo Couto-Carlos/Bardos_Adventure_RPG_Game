@@ -5,18 +5,24 @@ using UnityEngine;
 public class InicioScript : MonoBehaviour
 {
     public bool Sceneinicio = false;
-   public bool Sceneinicio2 = false;
-   public bool Sceneinicio5 = false;
-   public bool Sceneinicio3 = false;
-   public bool Sceneinicio4 = false;
-   public bool Sceneinicio6 = false;
-   public bool SceneInicio0 = false;
+    public bool Sceneinicio2 = false;
+    public bool Sceneinicio5 = false;
+    public bool Sceneinicio3 = false;
+    public bool Sceneinicio4 = false;
+    public bool Sceneinicio6 = false;
+    public bool SceneInicio0 = false;
+    public GameObject FandIN;
+    public GameObject FandOUT;
     public bool Load = false;
    
     // Start is called before the first frame update
     void Start()
     {
-       
+        if (FandOUT != null)
+        {
+            GameObject Panel = Instantiate(FandOUT, Vector3.zero, Quaternion.identity) as GameObject;
+            Destroy(Panel, 1);
+        }
     }
 
     // Update is called once per frame
@@ -32,35 +38,42 @@ public class InicioScript : MonoBehaviour
         {
             if (SceneInicio0 == true)
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio2");
+                StartCoroutine(StartSceneWithFanding("Inicio2"));
             }
             else if (Sceneinicio2 == true)
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio3");
+                StartCoroutine(StartSceneWithFanding("Inicio3"));
             }
             else if (Sceneinicio3 == true)
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio4");
+                StartCoroutine(StartSceneWithFanding("Inicio4"));
             }
             else if (Sceneinicio4 == true)
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Load");
+                StartCoroutine(StartSceneWithFanding("Load"));
             }
             else if (Sceneinicio5 == true)
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio6");
+                StartCoroutine(StartSceneWithFanding("Inicio6"));
             }
             else if (Sceneinicio6 == true)
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Load");
+                StartCoroutine(StartSceneWithFanding("Load"));
             }
             
             else if (Sceneinicio == true)
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio");
+                StartCoroutine(StartSceneWithFanding("Inicio"));
             }
         }
-         
+        
+        
+        IEnumerator StartSceneWithFanding(string Scene)
+        {
+            Instantiate(FandIN, Vector3.zero, Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(Scene);
+        }
         IEnumerator DELAY()
         {
             

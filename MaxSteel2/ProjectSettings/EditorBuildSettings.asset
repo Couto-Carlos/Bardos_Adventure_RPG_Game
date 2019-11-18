@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Florista.unity
     guid: 0cda03f3ba974604c9f81a48844a9c1e
+  - enabled: 1
+    path: Assets/Scenes/Ceifador.unity
+    guid: b77e21b48b65bdc4e884facf07763094
+  - enabled: 1
+    path: Assets/Scenes/Lenhador.unity
+    guid: fa5edbfc8ac3a834c97d20d6fe636758
   m_configObjects: {}

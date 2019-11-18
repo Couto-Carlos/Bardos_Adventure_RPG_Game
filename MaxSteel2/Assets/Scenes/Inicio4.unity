@@ -175,8 +175,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
@@ -232,13 +230,13 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341926131}
-  m_Text: "Um homem simples e humilde, \nque com m\xFAsica tenta alegrar o dia a
-    dia das pessoas. \nVivia com sua esposa e filha em seu peda\xE7o de terra, \nprocurando
+  m_Text: "Um homem simples e humilde, \nque com m\xFAsica tenta alegrar o dia a dia
+    das pessoas. \nVivia com sua esposa e filha em seu peda\xE7o de terra, \nprocurando
     paz em sua m\xFAsica. \nEstudando todos os dias para aperfei\xE7oa-la.\n\r\nPor\xE9m
-    sua filha certo dia,\ncuriosa, entrou no castelo do Rei para conhece-lo. \nO
-    Rei sabendo da situa\xE7\xE3o, aprisionou-a.\r\nContudo o Rei todo ano concede
-    um favor \na quem agrada-o com grande efic\xE1cia,\nent\xE3o o Bardo ter\xE1
-    que aprender novas m\xFAsicas \nem seu repert\xF3rio para toca-las ao Rei e recuperar
+    sua filha certo dia,\ncuriosa, entrou no castelo do Rei para conhece-lo. \nO Rei
+    sabendo da situa\xE7\xE3o, aprisionou-a.\r\nContudo o Rei todo ano concede um
+    favor \na quem agrada-o com grande efic\xE1cia,\nent\xE3o o Bardo ter\xE1 que
+    aprender novas m\xFAsicas \nem seu repert\xF3rio para toca-las ao Rei e recuperar
     \nsua amada filha.\nmostrar como o jogo funciona."
   m_OffsetZ: 0
   m_CharacterSize: 0.2
@@ -267,7 +265,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -515,8 +512,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -652,11 +647,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c1d2b03eb6a97468d7d649f1750b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sceneinicio: 0
   Sceneinicio2: 0
   Sceneinicio5: 0
   Sceneinicio3: 0
   Sceneinicio4: 1
   Sceneinicio6: 0
+  SceneInicio0: 0
+  FandIN: {fileID: 8266496699520914871, guid: 98dda7a1716f70948bccf8f7d2968205, type: 3}
+  FandOUT: {fileID: 6989013753509700788, guid: 00196c3f07f498843bba5c9fde32bb86, type: 3}
+  Load: 0
 --- !u!212 &1805270697
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -671,7 +671,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
