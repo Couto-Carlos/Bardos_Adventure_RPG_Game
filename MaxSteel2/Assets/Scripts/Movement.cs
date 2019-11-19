@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;	
 using UnityEngine.SceneManagement;
+
+
+
 public class Movement : MonoBehaviour
 {
-    //HLkKhK Beliver/ HKLJLK JoJo // LILILK The good the bad the ugly // IIIHKL Flauta Lindinha // HHKILJ OT 8 - BITS 
+    //HLkKhK Beliver/ HKLJLK JoJo // LILILK The good the bad the ugly // IIIHKL Flauta Lindinha // HHKILJ OT 8 - BITS ]
+
+    //Leitura Serial
+    //private SerialPort porta = new SerialPort("COM3", 9600);
     //RigidBody
     public Rigidbody2D corpo;
     //Animator
@@ -63,7 +70,12 @@ public class Movement : MonoBehaviour
     //Game Object
 
     public GameObject Sounds;
+    public GameObject FandIN;
+    public GameObject FandOUT;
 
+
+    //
+    public GameObject Panel;
 
     void Start()
     {    
@@ -123,6 +135,7 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                GameObject Panel = Instantiate(FandIN, Vector3.zero, Quaternion.identity) as GameObject;
                 Sounds.GetComponent<AudioSource>().mute = !Sounds.GetComponent<AudioSource>().mute;
                 animador.SetTrigger("Ocarina");
                 OcarinaMode = true;
@@ -200,6 +213,8 @@ public class Movement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                Panel.SetActive(false);
+                Destroy(Panel, 1);
                 //Sair do modo Ocarina
                 animador.SetTrigger("OcarinaOVER");
                 OcarinaMode = false;

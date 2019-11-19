@@ -527,8 +527,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ol\xE1!! eu sou Carlos, um dos desenvolvedores deste jogo, feito por SC
-    Products. Irei lhe mostrar como o jogo funciona.\n\nPressione Espa\xE7o"
+  m_Text: "Ol\xE1!! Eu sou Carlos, um dos desenvolvedores deste jogo feito por SC
+    Products. Irei-lhe mostrar como o jogo funciona.\n\nPressione Espa\xE7o"
 --- !u!222 &1703743955
 CanvasRenderer:
   m_ObjectHideFlags: 0

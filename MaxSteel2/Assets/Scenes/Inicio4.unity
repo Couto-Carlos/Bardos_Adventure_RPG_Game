@@ -231,13 +231,13 @@ TextMesh:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341926131}
   m_Text: "Um homem simples e humilde, \nque com m\xFAsica tenta alegrar o dia a dia
-    das pessoas. \nVivia com sua esposa e filha em seu peda\xE7o de terra, \nprocurando
-    paz em sua m\xFAsica. \nEstudando todos os dias para aperfei\xE7oa-la.\n\r\nPor\xE9m
+    das pessoas, vivia com sua esposa e filha em seu peda\xE7o de terra, \nprocurando
+    paz em sua m\xFAsica. \nEstudando todos os dias para aperfei\xE7oa-la.\n\r\nPor\xE9m,
     sua filha certo dia,\ncuriosa, entrou no castelo do Rei para conhece-lo. \nO Rei
-    sabendo da situa\xE7\xE3o, aprisionou-a.\r\nContudo o Rei todo ano concede um
-    favor \na quem agrada-o com grande efic\xE1cia,\nent\xE3o o Bardo ter\xE1 que
+    sabendo da situa\xE7\xE3o, aprisionou-a.\r\nContudo, o Rei todo ano concede um
+    favor \na quem agrada-o com grande efic\xE1cia,\nent\xE3o, o Bardo ter\xE1 que
     aprender novas m\xFAsicas \nem seu repert\xF3rio para toca-las ao Rei e recuperar
-    \nsua amada filha.\nmostrar como o jogo funciona."
+    \nsua amada filha.\n"
   m_OffsetZ: 0
   m_CharacterSize: 0.2
   m_LineSpacing: 1
