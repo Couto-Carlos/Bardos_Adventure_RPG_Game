@@ -1855,6 +1855,9 @@ MonoBehaviour:
   FandIN: {fileID: 8266496699520914871, guid: 98dda7a1716f70948bccf8f7d2968205, type: 3}
   FandOUT: {fileID: 6989013753509700788, guid: 00196c3f07f498843bba5c9fde32bb86, type: 3}
   Fanding: {fileID: 0}
+  Ceifador: 0
+  Florista: 0
+  Lenhador: 0
   OUT: 0
   IN: 0
   newPos: 0
@@ -2402,6 +2405,169 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Position: {x: 0, y: -2}
+--- !u!1001 &1955410179
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1657051344259164145, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC_test_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164159, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164159, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164159, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164159, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164159, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164159, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164159, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164159, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164159, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164159, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164159, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164144, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6330067551053237080, guid: 702a79544d8377b4dbbcd586431f65ce,
+        type: 3}
+    - target: {fileID: 1657051344259164144, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164157, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: Lenhador
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164158, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.43623877
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164158, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164158, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164158, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.9546766
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164158, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.16029644
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344259164158, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4.4487762
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: texts.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: texts.Array.data[1]
+      value: uma musica?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: texts.Array.data[2]
+      value: "antigamente eu era um Bardo tambem ,at\xE9 q eu levei uma flechada no
+        joelho e na mao , ai perdi alguns movimentos mas acho que posso lhe passar
+        uma musica "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: texts.Array.data[3]
+      value: "a musica \xE9 a seguinte :"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: texts.Array.data[0]
+      value: "Ol\xE1 Bardo, eu sei do acontecido como posso lhe ajudar?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: texts.Array.data[4]
+      value: "Notas : em um circulo de 180 graus h\xE1 um simbolo magico que representa
+        um numero"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: texts.Array.data[5]
+      value: multiplique este numero por 100 e divida em unidade ,dezena e centena.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: texts.Array.data[6]
+      value: "cada um dos divisores \xE9 uma nota. (PS: esta em sequencia ;))"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: texts.Array.data[7]
+      value: "agora va l\xE1 salvar sua filha ,boa sorte caro bardo."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 43f0a92f759049b4ebf17570b1f8d0c3, type: 3}
 --- !u!1 &2069057805
 GameObject:
   m_ObjectHideFlags: 0

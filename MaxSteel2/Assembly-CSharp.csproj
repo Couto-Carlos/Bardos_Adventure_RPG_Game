@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\StartingPosition.cs" />
     <Compile Include="Assets\Scripts\StayClose.cs" />
+    <Compile Include="Assets\TrancasScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/CARLOS/Documents/GitHub/Maxstell2.0/MaxSteel2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

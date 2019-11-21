@@ -157,6 +157,9 @@ MonoBehaviour:
   FandIN: {fileID: 8266496699520914871, guid: 98dda7a1716f70948bccf8f7d2968205, type: 3}
   FandOUT: {fileID: 6989013753509700788, guid: 00196c3f07f498843bba5c9fde32bb86, type: 3}
   Fanding: {fileID: 0}
+  Ceifador: 0
+  Florista: 0
+  Lenhador: 0
   OUT: 0
   IN: 0
   newPos: 0
@@ -597,7 +600,7 @@ Tilemap:
   - first: {x: 1, y: -1, z: 0}
     second:
       m_TileIndex: 17
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 18
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -857,11 +860,11 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1934146688469479899, guid: d95d96fbe8a528c438e2eac99a7be509,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 3
     m_Data: {fileID: -2894570137055578424, guid: d95d96fbe8a528c438e2eac99a7be509,
       type: 3}
@@ -4299,7 +4302,7 @@ PrefabInstance:
         type: 3}
       propertyPath: texts.Array.data[4]
       value: "Saia l\xE1 fora, Pressione Espa\xE7o e Repita estas notas 2 vezes, assim,
-        ver\xE1 o que ir\xE1 acontecer."
+        ver\xE1 o que ir\xE1 acontecer... (acho que o ceifador pode ter outra musica)."
       objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}

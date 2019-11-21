@@ -46,6 +46,7 @@ TagManager:
   - npc
   - Fanding
   - Mundo
+  - Portao3
   layers:
   - Default
   - TransparentFX

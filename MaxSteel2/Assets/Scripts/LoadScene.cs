@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-   public string sceneLoad;
-   public string personagem;
+    public string sceneLoad;
+    public string personagem;
     public Vector2 LocalPersonagem;
     public Vector2 StartingPosition;
     public GameObject FandIN;
     public GameObject FandOUT;
     public Animator Fanding;
+    public bool Ceifador;
+    public bool Florista;
+    public bool Lenhador;
     public bool OUT;
     public bool IN;
     GameObject Bardo;
@@ -39,7 +42,7 @@ public class LoadScene : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        
+
         ///////////////////////////////////////////////////////////////////////
         // Fanding = GameObject.FindGameObjectWithTag("Fanding").gameObject.GetComponent<Animator>();    
         //Bardo.GetComponent<Movement>().StartPosit = true;
@@ -47,11 +50,27 @@ public class LoadScene : MonoBehaviour
         Debug.Log("AA VVASKDJsa");
         Debug.Log(other.CompareTag(personagem));
         ////////////////////////////////////////////////////////////////////////
-        
+
         if (other.CompareTag(personagem) && !other.isTrigger)
         {
-
+           
             
+            if (Florista == true)
+            {
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Casa = true;
+            }
+            else if (Ceifador == true)
+            {
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Casa = true;
+            }
+            else if (Lenhador == true)
+            {
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Casa = true;
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Casa = false;
+            }
             ///////////////////////////////////////////////////////////////////
             Debug.Log("ENTROU");
             // Bardo.GetComponent<Movement>().BackPosition = BackPosition;

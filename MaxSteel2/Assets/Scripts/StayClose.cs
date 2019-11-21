@@ -10,7 +10,9 @@ public class StayClose : MonoBehaviour
     public Vector2 LocalPersonagem;
     private GameObject character;
     private bool bateu = false;
+    public bool Ceifador;
     public bool Florista;
+    public bool Lenhador;
     public bool placa;
 
     // public Collider2D other;
@@ -43,7 +45,13 @@ public class StayClose : MonoBehaviour
         }
         else
         {
-            
+            if (Ceifador)
+            {
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Tranca2 = true;
+            }else if (Lenhador)
+            {
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Tranca3 = true;
+            }
             GameObject canvasE = character.transform.Find("CanvasE").gameObject;
             GameObject selectE = GameObject.FindGameObjectWithTag("CanvasCharacter").transform.Find("CanvasE").gameObject;
             selectE = canvasE;
@@ -66,19 +74,8 @@ public class StayClose : MonoBehaviour
             canvasFlorista.SetActive(false);
             resetText();
         }
-        else if (placa ==true)
-        {
-            Debug.Log("Saiu do Trigger");
-            GameObject canvasText = character.transform.Find("CanvasText").gameObject;
-            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
-            bateu = false;
-            canvasText.SetActive(false);
-            canvasE.SetActive(false);
-            resetText();
-        }
         else
         {
-
             Debug.Log("Saiu do Trigger");
             GameObject canvasText = character.transform.Find("CanvasText").gameObject;
             GameObject canvasE = character.transform.Find("CanvasE").gameObject;
