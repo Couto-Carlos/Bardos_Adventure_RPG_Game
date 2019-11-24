@@ -10,6 +10,9 @@ public class StayClose : MonoBehaviour
     public Vector2 LocalPersonagem;
     private GameObject character;
     private bool bateu = false;
+    public bool Rei;
+    public bool filha;
+    public bool Quarda;
     public bool Ceifador;
     public bool Florista;
     public bool Lenhador;
@@ -43,18 +46,83 @@ public class StayClose : MonoBehaviour
                 canvasE.SetActive(true);
             }
         }
+        else if (Quarda == true)
+        {
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+            GameObject selectE = GameObject.FindGameObjectWithTag("Quarda").transform.Find("CanvasE").gameObject;
+            selectE = canvasE;
+            if (other.CompareTag(personagem) && !other.isTrigger)
+            {
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Tranca1 = true;
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Tranca2 = true;
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Tranca3 = true;
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Rei = true;
+                bateu = true;
+                canvasE.SetActive(true);
+            }
+        }
+        else if (Rei == true)
+        {
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+            GameObject selectE = GameObject.FindGameObjectWithTag("Rei").transform.Find("CanvasE").gameObject;
+            selectE = canvasE;
+            if (other.CompareTag(personagem) && !other.isTrigger)
+            {
+                bateu = true;
+                canvasE.SetActive(true);
+            }
+        }
+        else if (filha == true)
+        {
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+            GameObject selectE = GameObject.FindGameObjectWithTag("Filha").transform.Find("CanvasE").gameObject;
+            selectE = canvasE;
+            if (other.CompareTag(personagem) && !other.isTrigger)
+            {
+                bateu = true;
+                canvasE.SetActive(true);
+            }
+        }
         else
         {
+
+            //Destrancar as portas para musica
             if (Ceifador)
             {
                 GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Tranca2 = true;
             }else if (Lenhador)
             {
                 GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Tranca3 = true;
+            }else if (Quarda)
+            {
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Tranca1 = true;
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Tranca2 = true;
+                GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Tranca3 = true;
             }
+            //
+
             GameObject canvasE = character.transform.Find("CanvasE").gameObject;
-            GameObject selectE = GameObject.FindGameObjectWithTag("CanvasCharacter").transform.Find("CanvasE").gameObject;
+            GameObject selectE;
+
+
+            if (Quarda)
+            {
+                selectE = GameObject.FindGameObjectWithTag("Quarda").transform.Find("CanvasE").gameObject;
+                selectE = canvasE;
+            }
+            else if(filha){
+                selectE = GameObject.FindGameObjectWithTag("Filha").transform.Find("CanvasE").gameObject;
+                selectE = canvasE;
+            }
+            else if(Rei){
+                selectE = GameObject.FindGameObjectWithTag("Rei").transform.Find("CanvasE").gameObject;
+                selectE = canvasE;
+            }
+            else { 
+            selectE = GameObject.FindGameObjectWithTag("CanvasCharacter").transform.Find("CanvasE").gameObject;
             selectE = canvasE;
+            }
+
             if (other.CompareTag(personagem) && !other.isTrigger)
             {
                 bateu = true;
@@ -85,7 +153,6 @@ public class StayClose : MonoBehaviour
             resetText();
         }
     }
-
     void resetText()
     {
         if (Florista)
@@ -136,6 +203,58 @@ public class StayClose : MonoBehaviour
         else if (placa)
         {
             character = GameObject.Find("ListenerPlaca1");
+            GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+            canvasText.transform.Find("Text").GetComponent<charge_text>().parent = canvasText;
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+
+            if (bateu)
+            {
+                //canvas2.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    canvasE.SetActive(false);
+                    canvasText.SetActive(true);
+                }
+            }
+        }
+        else if (Quarda)
+        {
+            character = GameObject.FindGameObjectWithTag("Quarda");
+            GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+            canvasText.transform.Find("Text").GetComponent<charge_text>().parent = canvasText;
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+
+            if (bateu)
+            {
+                //canvas2.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Rei = true;
+                    canvasE.SetActive(false);
+                    canvasText.SetActive(true);
+                }
+            }
+        }
+        else if (filha)
+        {
+            character = GameObject.FindGameObjectWithTag("Filha");
+            GameObject canvasText = character.transform.Find("CanvasText").gameObject;
+            canvasText.transform.Find("Text").GetComponent<charge_text>().parent = canvasText;
+            GameObject canvasE = character.transform.Find("CanvasE").gameObject;
+
+            if (bateu)
+            {
+                //canvas2.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    canvasE.SetActive(false);
+                    canvasText.SetActive(true);
+                }
+            }
+        }
+        else if (Rei)
+        {
+            character = GameObject.FindGameObjectWithTag("Rei");
             GameObject canvasText = character.transform.Find("CanvasText").gameObject;
             canvasText.transform.Find("Text").GetComponent<charge_text>().parent = canvasText;
             GameObject canvasE = character.transform.Find("CanvasE").gameObject;

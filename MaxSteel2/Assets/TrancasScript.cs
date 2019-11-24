@@ -31,7 +31,10 @@ public class TrancasScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Rei)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

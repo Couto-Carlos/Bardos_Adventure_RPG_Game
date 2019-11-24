@@ -9,28 +9,24 @@ using System;
 
 public class Movement : MonoBehaviour
 {
-    //HLkKhK Beliver/ HKLJLK JoJo // LILILK The good the bad the ugly // IIIHKL Flauta Lindinha // HHKILJ OT 8 - BITS ]
-
-    //Leitura Serial
-    //private SerialPort porta = new SerialPort("COM3", 9600);
+   
+   
     //RigidBody
     public Rigidbody2D corpo;
     //Animator
     public Animator animador;
     //instancia
-
     public static Movement instance = null;
     //Serial
     public SerialPort port = new SerialPort("COM5", 9600);
-    string nota, AA, BB, DD, FF, P2;
     int A1, B2, D1, D2, F1;
+    String nota;
     // Notas
     public AudioSource Ocarina_D;
     public AudioSource Ocarina_D2;
     public AudioSource Ocarina_F;
     public AudioSource Ocarina_B;
     public AudioSource Ocarina_A;
-
     // Musicas
     public AudioSource BeliverSong;
     public AudioSource JoJoSong;
@@ -45,44 +41,33 @@ public class Movement : MonoBehaviour
     public AudioSource SongOfStorm;
     public AudioSource WIN;
     private AudioSource MusicaTocando;
-
     //Booleanos
-
+    public bool Rei = false;
     public bool Tranca1 = false;
     public bool Tranca2 = false;
     public bool Tranca3 = false;
     public bool tocado1 = false;
     public bool tocado2 = false;
     public bool tocado3 = false;
-    public bool Scene3 = false;
     public bool OcarinaMode = false;
     public bool StartPosit = true;
     public bool TrocaDeTela;
     bool tocando = false;
     public bool Casa;
-
     //Images
-
     Image Ocarinabase;
     Image A, D, E, C, B;
-
     //Vectors
-
     public Vector2 StartingPosition;
-
     // Numerals
-
     public float velocidade = 6;
     int[] Notas = new int[6];
     int QNTNotas = 0;
-
+    public int TocandoProRei = 0;
     //Game Object
-
     public GameObject Sounds;
     public GameObject FandIN;
     public GameObject FandOUT;
-
-
     //
     public GameObject Panel;
 
@@ -101,12 +86,11 @@ public class Movement : MonoBehaviour
         }
         catch (Exception)
         {
-
+            nota = "";
         }
          // SetBardoForms
          corpo = GetComponent<Rigidbody2D>();
         animador = GetComponent<Animator>(); 
-
         //Sound
         Sounds = GameObject.FindGameObjectWithTag("Sound");
         //Definição OcarinaBase
@@ -117,27 +101,20 @@ public class Movement : MonoBehaviour
         C = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
         B = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
         E = GameObject.FindGameObjectWithTag("OcarinaBase").GetComponent<Image>();
-
-
         //Instanciamento
         if (instance == null)
         {
-  
             instance = this;
-   
         }
         else if (instance != this)
         {
-            //Destroy this, this enforces our singleton pattern so there can only be one instance of SoundManager.
             Destroy(gameObject);
         }
-        //Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
         DontDestroyOnLoad(gameObject);
     }
-
-
     void Update()
     {
+//// Vauvula de localização Startposit...
             if (StartPosit == true) {
             Debug.Log("Starting Position enter");
 
@@ -154,7 +131,7 @@ public class Movement : MonoBehaviour
             Debug.Log(transform.position);  
             StartPosit = false;
         }
-
+////  Fim da Vauvula
         corpo.velocity = new Vector2(0, 0);
         if (OcarinaMode == false)
         {
@@ -243,7 +220,7 @@ public class Movement : MonoBehaviour
             }
             catch (Exception)
             {
-
+                nota = "";
                 Debug.Log("Nao mandou");
             }
 
@@ -465,16 +442,29 @@ public class Movement : MonoBehaviour
                     {
                         if (Casa == false)
                         {
+                                                
+                            if (TocandoProRei == 3)
+                            {
+                                StartCoroutine(Example(WIN, 2.5f));
+                                GameObject Tranca4 = GameObject.FindGameObjectWithTag("Portao4");
+                                Tranca4.SetActive(false);
+                                TocandoProRei = 0;
+                            }else if (Rei)
+                            {
+                                TocandoProRei++;
+                            }
+                            else {
                             tocado1 = true;
                             StartCoroutine(Example(WIN, 2.5f));
                             GameObject Tranca1 = GameObject.FindGameObjectWithTag("Portao1");
-                            //  Destroy(Parede);
                             Tranca1.SetActive(false);
+                            }
                         }
+                        Tranca1 = false;
                     }
                     SongOfHealingMusic.Play();
                     tocando = true;
-                    Debug.Log("CARLOS EDUARDO");
+                    Debug.Log(TocandoProRei);
                 }
                 else if (Notas[0] == 1 && Notas[1] == 4 && Notas[2] == 2 && Notas[3] == 1 && Notas[4] == 4 && Notas[5] == 2)
                 {
@@ -482,16 +472,29 @@ public class Movement : MonoBehaviour
                     {
                         if (Casa == false)
                         {
+                            if (TocandoProRei == 3)
+                            {
+                                StartCoroutine(Example(WIN, 2.5f));
+                                GameObject Tranca4 = GameObject.FindGameObjectWithTag("Portao4");
+                                Tranca4.SetActive(false);
+                                TocandoProRei = 0;
+                            }
+                            else if (Rei)
+                            {
+                                TocandoProRei++;
+                            }
+                            else { 
                             tocado2 = true;
                             StartCoroutine(Example(WIN, 2.5f));
                             GameObject tranca2 = GameObject.FindGameObjectWithTag("Portao2");
-                            //  Destroy(Parede);
                             tranca2.SetActive(false);
+                            }
                         }
+                        Tranca2 = false;
                     }
                     SongOfStorm.Play();
                     tocando = true;
-                    Debug.Log("CARLOS EDUARDO");
+                    Debug.Log(TocandoProRei);
                 }
                 else if (Notas[0] == 3 && Notas[1] == 1 && Notas[2] == 4 && Notas[3] == 3 && Notas[4] == 1 && Notas[5] == 4)
                 {
@@ -499,16 +502,38 @@ public class Movement : MonoBehaviour
                     {
                         if (Casa == false)
                         {
+                            if (TocandoProRei == 3)
+                            {
+                                StartCoroutine(Example(WIN, 2.5f));
+                                GameObject Tranca4 = GameObject.FindGameObjectWithTag("Portao4");
+                                Tranca4.SetActive(false);
+                                TocandoProRei = 0;
+                            }
+                            else if (Rei)
+                            {
+                                TocandoProRei++;
+                            }
+                            else {
                             tocado3 = true;
                             StartCoroutine(Example(WIN, 2.5f));
                             GameObject tranca3 = GameObject.FindGameObjectWithTag("Portao3");
-                            //  Destroy(Parede);
                             tranca3.SetActive(false);
+                            }
+                            if (TocandoProRei == 3)
+                            {
+                                StartCoroutine(Example(WIN, 2.5f));
+                                GameObject Tranca4 = GameObject.FindGameObjectWithTag("Portao4");
+                                Tranca4.SetActive(false);
+                                TocandoProRei = 0;
+                            }
                         }
+                        Tranca3 = false;
                     }
                     SongOfTime.Play();
                     tocando = true;
-                }else if (Notas[0] == 1 && Notas[1] == 1 && Notas[2] == 2 && Notas[3] == 3 && Notas[4] == 4 && Notas[5] == 1)
+                    Debug.Log(TocandoProRei);
+                }
+                else if (Notas[0] == 1 && Notas[1] == 1 && Notas[2] == 2 && Notas[3] == 3 && Notas[4] == 4 && Notas[5] == 1)
                 {
                     MegalovaniaMusic.Play();
                     tocando = true;

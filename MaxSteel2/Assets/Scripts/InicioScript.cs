@@ -11,6 +11,7 @@ public class InicioScript : MonoBehaviour
     public bool Sceneinicio4 = false;
     public bool Sceneinicio6 = false;
     public bool SceneInicio0 = false;
+    public bool Final = false;
     public GameObject FandIN;
     public GameObject FandOUT;
     public bool Load = false;
@@ -64,6 +65,9 @@ public class InicioScript : MonoBehaviour
             else if (Sceneinicio == true)
             {
                 StartCoroutine(StartSceneWithFanding("Inicio"));
+            }else if(Final == true)
+            {
+                StartCoroutine(StartSceneWithFanding("Inicio0"));
             }
         }
         

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,9 +30,17 @@ public class charge_text : MonoBehaviour
         Debug.Log("MENSAGEM ATUAL:" + mensagemAtual);
         if (mensagemAtual == texts.Length)
         {
-            mensagemAtual = 0;
-            parent.SetActive(false);
-            E.SetActive(true);
+            mensagemAtual = 0;  
+            try
+            {
+                parent.SetActive(false);
+                E.SetActive(true);
+            }
+            catch (Exception)
+            {
+            }
+
+            
         }
         else { 
         string TextoCompleto = texts[mensagemAtual];

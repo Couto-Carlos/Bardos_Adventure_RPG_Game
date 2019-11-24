@@ -47,6 +47,10 @@ TagManager:
   - Fanding
   - Mundo
   - Portao3
+  - Portao4
+  - Rei
+  - Quarda
+  - Filha
   layers:
   - Default
   - TransparentFX
