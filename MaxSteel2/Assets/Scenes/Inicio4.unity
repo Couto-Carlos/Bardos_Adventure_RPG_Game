@@ -216,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341926131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.4, y: 62.8, z: 201.59998}
+  m_LocalPosition: {x: -28.8, y: 60.9, z: 201.59998}
   m_LocalScale: {x: 22.399998, y: 22.399998, z: 22.399998}
   m_Children: []
   m_Father: {fileID: 1290553158}
@@ -231,7 +231,7 @@ TextMesh:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341926131}
   m_Text: "Um homem simples e humilde, \nque com m\xFAsica tenta alegrar o dia a dia
-    das pessoas, vivia com sua esposa e filha em seu peda\xE7o de terra, \nprocurando
+    das pessoas,\nvivia com sua esposa e filha em seu peda\xE7o de terra, \nprocurando
     paz em sua m\xFAsica. \nEstudando todos os dias para aperfei\xE7oa-la.\n\r\nPor\xE9m,
     sua filha certo dia,\ncuriosa, entrou no castelo do Rei para conhece-lo. \nO Rei
     sabendo da situa\xE7\xE3o, aprisionou-a.\r\nContudo, o Rei todo ano concede um
@@ -242,7 +242,7 @@ TextMesh:
   m_CharacterSize: 0.2
   m_LineSpacing: 1
   m_Anchor: 0
-  m_Alignment: 0
+  m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 0
   m_FontStyle: 0
@@ -654,6 +654,7 @@ MonoBehaviour:
   Sceneinicio4: 1
   Sceneinicio6: 0
   SceneInicio0: 0
+  Final: 0
   FandIN: {fileID: 8266496699520914871, guid: 98dda7a1716f70948bccf8f7d2968205, type: 3}
   FandOUT: {fileID: 6989013753509700788, guid: 00196c3f07f498843bba5c9fde32bb86, type: 3}
   Load: 0

@@ -8,13 +8,14 @@ public class LoadScene : MonoBehaviour
 {
     public string sceneLoad;
     public string personagem;
-    private Vector2 StartingPosition;
+    public Vector2 StartingPosition;
     public GameObject FandIN;
     public GameObject FandOUT;
     public bool Ceifador;
     public bool Florista;
     public bool Lenhador;
     public bool Rei;
+    public bool Final = false;
     GameObject Bardo;
     GameObject Mundo;
     public bool newPos;
@@ -38,6 +39,10 @@ public class LoadScene : MonoBehaviour
     {
         if (other.CompareTag(personagem) && !other.isTrigger)
         {
+            if (Final)
+            {
+                Destroy(Bardo);
+            }
             if (GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().Rei)
             {
                 GameObject.FindGameObjectWithTag("Link").GetComponent<Movement>().TocandoProRei = 0;

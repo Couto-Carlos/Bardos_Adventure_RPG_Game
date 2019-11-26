@@ -299,14 +299,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c1d2b03eb6a97468d7d649f1750b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sceneinicio: 1
+  Sceneinicio: 0
   Sceneinicio2: 0
   Sceneinicio5: 0
   Sceneinicio3: 0
   Sceneinicio4: 0
   Sceneinicio6: 0
   SceneInicio0: 0
-  Final: 0
+  Final: 1
   FandIN: {fileID: 8266496699520914871, guid: 98dda7a1716f70948bccf8f7d2968205, type: 3}
   FandOUT: {fileID: 6989013753509700788, guid: 00196c3f07f498843bba5c9fde32bb86, type: 3}
   Load: 0
@@ -659,14 +659,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c1d2b03eb6a97468d7d649f1750b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sceneinicio: 1
+  Sceneinicio: 0
   Sceneinicio2: 0
   Sceneinicio5: 0
   Sceneinicio3: 0
   Sceneinicio4: 0
   Sceneinicio6: 0
   SceneInicio0: 0
-  Final: 0
+  Final: 1
   FandIN: {fileID: 8266496699520914871, guid: 98dda7a1716f70948bccf8f7d2968205, type: 3}
   FandOUT: {fileID: 6989013753509700788, guid: 00196c3f07f498843bba5c9fde32bb86, type: 3}
   Load: 0
