@@ -42,6 +42,7 @@ public class Movement : MonoBehaviour
     public AudioSource WIN;
     private AudioSource MusicaTocando;
     //Booleanos
+    bool Help = false;
     public bool Rei = false;
     public bool Tranca1 = false;
     public bool Tranca2 = false;
@@ -131,8 +132,46 @@ public class Movement : MonoBehaviour
             Debug.Log(transform.position);  
             StartPosit = false;
         }
-////  Fim da Vauvula
+        ////  Fim da Vauvula
+
+        //// Correr
         corpo.velocity = new Vector2(0, 0);
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            velocidade = 6;
+        }
+        else
+        {
+            velocidade = 4;
+        }
+
+        //// Correr End
+
+
+        //// Help Controller
+        if (!Help)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                gameObject.transform.Find("CanvasHelp").gameObject.SetActive(true);
+                gameObject.transform.Find("CanvasR").gameObject.SetActive(false);
+                Help = true;
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                gameObject.transform.Find("CanvasHelp").gameObject.SetActive(false);
+                gameObject.transform.Find("CanvasR").gameObject.SetActive(true);
+                Help = false;
+            }
+        }
+//// Help Controller End
+        
+
+
         if (OcarinaMode == false)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -270,7 +309,7 @@ public class Movement : MonoBehaviour
                 D2 = 0;
                 D1 = 0;
             }
-
+            
             if (Input.GetKeyDown(KeyCode.Space))
             {
               
@@ -327,9 +366,7 @@ public class Movement : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.I) || D2 == 3)
             {
                 D2 = 0;
-                //2
-                Ocarina_D2.Play();
-                // Localizar Onde colocar a Nota  
+                Ocarina_D2.Play();         
                 if (QNTNotas == 0){
                     C = GameObject.FindGameObjectWithTag("^(1)").GetComponent<Image>();
                 }else if (QNTNotas == 1){
