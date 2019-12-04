@@ -69,6 +69,7 @@ public class Movement : MonoBehaviour
     public GameObject Sounds;
     public GameObject FandIN;
     public GameObject FandOUT;
+    public GameObject FiltroSongOfHealing;
     //
     public GameObject Panel;
 
@@ -499,8 +500,10 @@ public class Movement : MonoBehaviour
                         }
                         Tranca1 = false;
                     }
+                    Panel = Instantiate(FiltroSongOfHealing, Vector3.zero, Quaternion.identity) as GameObject;
                     SongOfHealingMusic.Play();
                     tocando = true;
+                    Destroy(Panel, 4);
                     Debug.Log(TocandoProRei);
                 }
                 else if (Notas[0] == 1 && Notas[1] == 4 && Notas[2] == 2 && Notas[3] == 1 && Notas[4] == 4 && Notas[5] == 2)
@@ -511,6 +514,7 @@ public class Movement : MonoBehaviour
                         {
                             if (TocandoProRei == 3)
                             {
+                                
                                 StartCoroutine(Example(WIN, 2.5f));
                                 GameObject Tranca4 = GameObject.FindGameObjectWithTag("Portao4");
                                 Tranca4.SetActive(false);
@@ -518,9 +522,11 @@ public class Movement : MonoBehaviour
                             }
                             else if (Rei)
                             {
+                                
                                 TocandoProRei++;
                             }
-                            else { 
+                            else {
+                           
                             tocado2 = true;
                             StartCoroutine(Example(WIN, 2.5f));
                             GameObject tranca2 = GameObject.FindGameObjectWithTag("Portao2");
@@ -529,8 +535,10 @@ public class Movement : MonoBehaviour
                         }
                         Tranca2 = false;
                     }
+                    
                     SongOfStorm.Play();
                     tocando = true;
+                    
                     Debug.Log(TocandoProRei);
                 }
                 else if (Notas[0] == 3 && Notas[1] == 1 && Notas[2] == 4 && Notas[3] == 3 && Notas[4] == 1 && Notas[5] == 4)

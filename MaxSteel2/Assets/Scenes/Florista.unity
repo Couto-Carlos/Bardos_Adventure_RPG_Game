@@ -152,16 +152,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneLoad: mundo
   personagem: Link
-  LocalPersonagem: {x: 0, y: 0}
   StartingPosition: {x: 9.5, y: 48}
   FandIN: {fileID: 8266496699520914871, guid: 98dda7a1716f70948bccf8f7d2968205, type: 3}
   FandOUT: {fileID: 6989013753509700788, guid: 00196c3f07f498843bba5c9fde32bb86, type: 3}
-  Fanding: {fileID: 0}
   Ceifador: 0
   Florista: 0
   Lenhador: 0
-  OUT: 0
-  IN: 0
+  Rei: 0
+  Final: 0
   newPos: 0
 --- !u!61 &13399973
 BoxCollider2D:
@@ -4260,7 +4258,7 @@ PrefabInstance:
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.size
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
@@ -4277,47 +4275,45 @@ PrefabInstance:
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.data[0]
-      value: "Ol\xE1, eu sou o florista, ouvi falar que buscas aprender novas m\xFAsicas!
-        Tenho uma para voc\xEA, para isso, um enigma:    PRESS E."
+      value: "Ol\xE1, eu sou o florista, ouvi falar que buscas aprender novas m\xFAsicas! "
       objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.data[1]
-      value: "1\xBA Nota: 2X + 41 - 51 = 0                        Press E to the next
-        Note"
+      value: Eu Aprendi um com um jovem garoto que usava uma mascara meio assustadora.
       objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.data[2]
-      value: "2\xBA Nota: -8Y + 54  = 15*2                                    Press
-        E to the next Note"
+      value: Porem eu vi que ele estava assustado com oque estava acontecendo
       objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.data[3]
-      value: "3\xBA Nota: 9Z + 13 + 20 = + 33 + 36                            Press
-        E to the next Note"
+      value: "Eu o abriguei por 1 dia e ele me ensinou esta m\xFAsica: "
       objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.data[4]
-      value: "Saia l\xE1 fora, Pressione Espa\xE7o e Repita estas notas 2 vezes, assim,
-        ver\xE1 o que ir\xE1 acontecer... (acho que o ceifador pode ter outra musica)."
+      value: "1\xBA Nota: 2X + 41 - 51 = 0                                          Press
+        E to the next Note"
       objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.data[5]
-      value: "3\xBA : 9Z + 13 + 20 = + 33 + 36"
+      value: "2\xBA Nota: -8Y + 54  = 15*2                                                Press
+        E to the next Note"
       objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.data[6]
-      value: "3\xBA : 9Z + 13 + 20 = + 33 + 36"
+      value: "3\xBA Nota: 9Z + 13 + 20 = + 33 + 36                          "
       objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.data[7]
-      value: "3\xBA : 9Z + 13 + 20 = + 33 + 36"
+      value: "Saia l\xE1 fora, Pressione Espa\xE7o e Repita estas notas 2 vezes, assim,
+        ver\xE1 o que ir\xE1 acontecer... (acho que o ceifador pode ter outra musica)."
       objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
