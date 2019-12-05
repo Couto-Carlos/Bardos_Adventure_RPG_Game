@@ -500,11 +500,11 @@ public class Movement : MonoBehaviour
                         }
                         Tranca1 = false;
                     }
-                    Panel = Instantiate(FiltroSongOfHealing, Vector3.zero, Quaternion.identity) as GameObject;
+                    //Panel = Instantiate(FiltroSongOfHealing, Vector3.zero, Quaternion.identity) as GameObject;
                     SongOfHealingMusic.Play();
                     tocando = true;
                     Destroy(Panel, 4);
-                    Debug.Log(TocandoProRei);
+                   // Debug.Log(TocandoProRei);
                 }
                 else if (Notas[0] == 1 && Notas[1] == 4 && Notas[2] == 2 && Notas[3] == 1 && Notas[4] == 4 && Notas[5] == 2)
                 {

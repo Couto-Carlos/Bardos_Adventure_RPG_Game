@@ -290,13 +290,14 @@ TextMesh:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601298143}
   m_Text: "Explicarei um pouco a voc\xEAs como funcionam as teclas.\n W, A, S e D
-    servem para sua movimenta\xE7\xE3o.\n Espa\xE7o serve para voc\xEA ativar o modo
-    Ocarina.\n E as teclas H, J, K, L e I servem para tocar a Ocarina."
+    servem para sua movimenta\xE7\xE3o e utilize\nshift para correr.\n Espa\xE7o serve
+    para voc\xEA ativar o modo Ocarina.\n E as teclas H, J, K, L e I servem para tocar
+    a Ocarina."
   m_OffsetZ: 0
   m_CharacterSize: 0.3
   m_LineSpacing: 1
   m_Anchor: 0
-  m_Alignment: 0
+  m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 0
   m_FontStyle: 0
@@ -684,6 +685,8 @@ MonoBehaviour:
   Sceneinicio4: 0
   Sceneinicio6: 0
   SceneInicio0: 0
+  SceneInicioHelpFlute: 0
+  SceneInicioHelpMath: 0
   Final: 0
   FandIN: {fileID: 8266496699520914871, guid: 98dda7a1716f70948bccf8f7d2968205, type: 3}
   FandOUT: {fileID: 6989013753509700788, guid: 00196c3f07f498843bba5c9fde32bb86, type: 3}
