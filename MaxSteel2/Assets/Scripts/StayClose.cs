@@ -189,7 +189,7 @@ public class StayClose : MonoBehaviour
             GameObject canvasText = character.transform.Find("CanvasTextFlorista").gameObject;
             canvasText.transform.Find("Text").GetComponent<charge_text>().parent = canvasText;
             GameObject canvasE = character.transform.Find("CanvasFlorista").gameObject;
-
+            
             if (bateu)
             {
                 //canvas2.SetActive(true);

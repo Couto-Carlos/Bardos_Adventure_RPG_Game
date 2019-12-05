@@ -11,6 +11,8 @@ public class InicioScript : MonoBehaviour
     public bool Sceneinicio4 = false;
     public bool Sceneinicio6 = false;
     public bool SceneInicio0 = false;
+    public bool SceneInicioHelpFlute = false;
+    public bool SceneInicioHelpMath = false;
     public bool Final = false;
     public GameObject FandIN;
     public GameObject FandOUT;
@@ -43,7 +45,7 @@ public class InicioScript : MonoBehaviour
             }
             else if (Sceneinicio2 == true)
             {
-                StartCoroutine(StartSceneWithFanding("Inicio3"));
+                StartCoroutine(StartSceneWithFanding("InicioHelpFlute"));
             }
             else if (Sceneinicio3 == true)
             {
@@ -60,6 +62,12 @@ public class InicioScript : MonoBehaviour
             else if (Sceneinicio6 == true)
             {
                 StartCoroutine(StartSceneWithFanding("Load"));
+            }else if (SceneInicioHelpFlute)
+            {
+                StartCoroutine(StartSceneWithFanding("InicioHelpMath"));
+            }else if (SceneInicioHelpMath)
+            {
+                StartCoroutine(StartSceneWithFanding("Inicio3"));
             }
             
             else if (Sceneinicio == true)
@@ -67,7 +75,7 @@ public class InicioScript : MonoBehaviour
                 StartCoroutine(StartSceneWithFanding("Inicio"));
             }else if(Final == true)
             {
-                StartCoroutine(StartSceneWithFanding("Inicio0"));
+               // StartCoroutine(StartSceneWithFanding("FirstScene"));
             }
         }
         

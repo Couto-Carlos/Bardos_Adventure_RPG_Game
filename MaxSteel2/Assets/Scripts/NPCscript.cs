@@ -22,6 +22,7 @@ public class NPCscript : MonoBehaviour
         
         if (other.CompareTag("Link") && !other.isTrigger)
         {
+          
             bateu = true;
             CanvasE.SetActive(true);
         }
