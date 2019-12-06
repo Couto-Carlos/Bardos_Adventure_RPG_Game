@@ -422,8 +422,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -95, y: -99.314}
-  m_SizeDelta: {x: 213.9, y: 57.371}
+  m_AnchoredPosition: {x: -83.9, y: -105.6}
+  m_SizeDelta: {x: 229.06, y: 47.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &576567598
 MonoBehaviour:
@@ -456,7 +456,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press Space
+  m_Text: "Precione Espa\xE7o"
 --- !u!222 &576567599
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -13683,11 +13683,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 4.685961
       objectReference: {fileID: 0}
-    - target: {fileID: 1657051344272305712, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_TagString
-      value: Filha
-      objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.size
@@ -13697,6 +13692,41 @@ PrefabInstance:
         type: 3}
       propertyPath: texts.Array.data[0]
       value: Obrigado pai, estava com medo de nunca mais sair...
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.024700165
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.2408333
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.010982513
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7576809
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344272305712, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Filha
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43f0a92f759049b4ebf17570b1f8d0c3, type: 3}
@@ -14389,11 +14419,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 3.694377
       objectReference: {fileID: 0}
-    - target: {fileID: 1657051344272305712, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_TagString
-      value: Quarda
-      objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.size
@@ -14402,7 +14427,47 @@ PrefabInstance:
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.data[0]
-      value: "N\xE3o se aproxime, toque as musicas aqui!!!!"
+      value: "N\xE3o se aproxime, toque na sequ\xEAncia correta as musicas aqui!!!!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: TextVector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.018354595
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7435461
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.027114868
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.1511955
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344272305712, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Quarda
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43f0a92f759049b4ebf17570b1f8d0c3, type: 3}
@@ -25847,12 +25912,12 @@ PrefabInstance:
     - target: {fileID: 2803296383124844229, guid: fdbe0d01f9507a342a6898cb82119ade,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.22
+      value: -2.86
       objectReference: {fileID: 0}
     - target: {fileID: 2803296383124844229, guid: fdbe0d01f9507a342a6898cb82119ade,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.95
+      value: 13.6
       objectReference: {fileID: 0}
     - target: {fileID: 2803296383124844229, guid: fdbe0d01f9507a342a6898cb82119ade,
         type: 3}
@@ -26396,11 +26461,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 3.8333404
       objectReference: {fileID: 0}
-    - target: {fileID: 1657051344272305712, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_TagString
-      value: Rei
-      objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.size
@@ -26410,6 +26470,41 @@ PrefabInstance:
         type: 3}
       propertyPath: texts.Array.data[0]
       value: Realmente voce tocou muito bem , pode levar sua filha...
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.040678978
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.1507854
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.022623658
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.69574213
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344272305712, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Rei
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43f0a92f759049b4ebf17570b1f8d0c3, type: 3}

@@ -1850,16 +1850,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneLoad: mundo
   personagem: Link
-  LocalPersonagem: {x: 0, y: 0}
   StartingPosition: {x: 9.5, y: 48}
   FandIN: {fileID: 8266496699520914871, guid: 98dda7a1716f70948bccf8f7d2968205, type: 3}
   FandOUT: {fileID: 6989013753509700788, guid: 00196c3f07f498843bba5c9fde32bb86, type: 3}
-  Fanding: {fileID: 0}
   Ceifador: 0
   Florista: 0
   Lenhador: 0
-  OUT: 0
-  IN: 0
+  Rei: 0
+  Final: 0
   newPos: 0
 --- !u!61 &822463200
 BoxCollider2D:
@@ -2565,6 +2563,36 @@ PrefabInstance:
         type: 3}
       propertyPath: texts.Array.data[7]
       value: "agora va l\xE1 salvar sua filha ,boa sorte caro bardo."
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0023235679
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.153221
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.011352494
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.76434374
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43f0a92f759049b4ebf17570b1f8d0c3, type: 3}

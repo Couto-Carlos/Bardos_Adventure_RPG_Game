@@ -4210,51 +4210,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 6.6941037
       objectReference: {fileID: 0}
-    - target: {fileID: 1657051344272305712, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_TagString
-      value: CanvasCharacterFlorista
-      objectReference: {fileID: 0}
-    - target: {fileID: 1657051345471388082, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_Name
-      value: CanvasFlorista
-      objectReference: {fileID: 0}
-    - target: {fileID: 1657051344123182608, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1657051344123182608, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 1657051345932648723, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1657051345932648723, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_Name
-      value: CanvasTextFlorista
-      objectReference: {fileID: 0}
-    - target: {fileID: 1657051345471388094, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1657051345932648735, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1657051345932648735, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1657051344113184080, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}
       propertyPath: texts.Array.size
@@ -4539,6 +4494,81 @@ PrefabInstance:
         type: 3}
       propertyPath: texts.Array.data[52]
       value: "3\xBA : 9Z + 13 + 20 = + 33 + 36"
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.03264427
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.0677452
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0025663823
+      objectReference: {fileID: 0}
+    - target: {fileID: -5982451395135840406, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.61928475
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344272305712, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_TagString
+      value: CanvasCharacterFlorista
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051345471388082, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Name
+      value: CanvasFlorista
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344123182608, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051344123182608, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051345932648723, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051345932648723, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Name
+      value: CanvasTextFlorista
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051345471388094, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051345932648735, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657051345932648735, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4622522550781817611, guid: 43f0a92f759049b4ebf17570b1f8d0c3,
         type: 3}

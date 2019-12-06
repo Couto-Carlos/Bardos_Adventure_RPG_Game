@@ -291,8 +291,8 @@ TextMesh:
   m_GameObject: {fileID: 1601298143}
   m_Text: "Explicarei um pouco a voc\xEAs como funcionam as teclas.\n W, A, S e D
     servem para sua movimenta\xE7\xE3o e utilize\nshift para correr.\n Espa\xE7o serve
-    para voc\xEA ativar o modo Ocarina.\n E as teclas H, J, K, L e I servem para tocar
-    a Ocarina."
+    para voc\xEA ativar a Flauta(Personagem para ao tocar a flauta).\n E as teclas
+    H, J, K, L e I servem para tocar a Flauta."
   m_OffsetZ: 0
   m_CharacterSize: 0.3
   m_LineSpacing: 1
@@ -353,7 +353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601298143}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57, y: 99, z: 201.59998}
+  m_LocalPosition: {x: -144.8, y: 111.5, z: 201.59998}
   m_LocalScale: {x: 22.399998, y: 22.399998, z: 22.399998}
   m_Children: []
   m_Father: {fileID: 2089671535}
@@ -576,7 +576,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press Space
+  m_Text: "Precione Espa\xE7o"
 --- !u!222 &2042190739
 CanvasRenderer:
   m_ObjectHideFlags: 0

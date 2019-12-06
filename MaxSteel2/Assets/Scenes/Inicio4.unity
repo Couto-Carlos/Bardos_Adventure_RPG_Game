@@ -491,7 +491,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35.3, y: -74.7}
+  m_AnchoredPosition: {x: 35.3, y: -64.6}
   m_SizeDelta: {x: 160, y: 29.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570498216
@@ -525,7 +525,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press Space
+  m_Text: "Precione Espa\xE7o"
 --- !u!222 &1570498217
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -611,7 +611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665010372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -654,6 +654,8 @@ MonoBehaviour:
   Sceneinicio4: 1
   Sceneinicio6: 0
   SceneInicio0: 0
+  SceneInicioHelpFlute: 0
+  SceneInicioHelpMath: 0
   Final: 0
   FandIN: {fileID: 8266496699520914871, guid: 98dda7a1716f70948bccf8f7d2968205, type: 3}
   FandOUT: {fileID: 6989013753509700788, guid: 00196c3f07f498843bba5c9fde32bb86, type: 3}
@@ -715,7 +717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805270695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.88, y: -0.05, z: 0}
+  m_LocalPosition: {x: -3.88, y: -0.05, z: 10}
   m_LocalScale: {x: 1.402, y: 1.393, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
